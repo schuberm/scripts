@@ -1,0 +1,12 @@
+#!/bin/sh
+
+RSYNC=/usr/bin/rsync 
+SSH=/usr/bin/ssh 
+#KEY=/home/thisuser/cron/thishost-rsync-key 
+RUSER=
+RHOST=
+RPATH= 
+LPATH= 
+
+#$RSYNC -az -e "$SSH -i $KEY" $RUSER@$RHOST:$RPATH $LPATH 
+$RSYNC -az -e $SSH $RUSER@$RHOST:$RPATH $LPATH 
